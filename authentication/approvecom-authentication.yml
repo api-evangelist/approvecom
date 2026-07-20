@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+docs: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter_name: x-api-key
+  description: >-
+    Every Approve.com / Tipalti Procurement REST API request must include the API token in
+    the x-api-key header. Tokens are issued per environment (sandbox and production) and are
+    obtained from your Tipalti Implementation Manager rather than a self-serve dashboard.
+  environments:
+  - name: production
+    base_url: https://triggers.approve.com
+  - name: sandbox
+    base_url: https://triggers.sandbox.approve.com
