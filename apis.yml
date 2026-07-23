@@ -1,25 +1,90 @@
 aid: approvecom
 name: Approve.com
-description: Approve.com is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Approve.com is a cloud-based procurement platform founded in 2019 in Israel that lets
+  businesses stand up a proper purchase-order process quickly, streamlining purchase
+  requisitions, multi-step approvals, real-time budgets, and vendor onboarding with
+  real-time spend controls and insights. Tipalti acquired Approve.com in April 2021 and
+  now operates it as Tipalti Procurement (Tipalti Approve). Its Procurement REST API is
+  still served from the approve.com domain (production https://triggers.approve.com,
+  sandbox https://triggers.sandbox.approve.com), authenticating with an x-api-key header
+  and exchanging JSON with ISO 8601 dates; the purchase-orders API exposes GET and Update
+  purchase-order operations so an external system can stay in sync with Tipalti.
 url: https://raw.githubusercontent.com/api-evangelist/approvecom/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/api-evangelist
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
+- tipalti
+- aleph
+x-acquired-by: tipalti
+x-acquired-date: '2021-04'
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Procurement
+- Purchase Orders
+- Spend Management
+- Accounts Payable
+- Vendor Management
+- Finance
+- Approvals
+- B2B
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Approve.com Procurement REST API
+  description: >-
+    Procurement REST API (Tipalti Procurement, formerly Approve.com) for syncing purchase
+    orders between an external system and Tipalti. Exposes GET purchase-order and Update
+    purchase-order operations. JSON over HTTPS with ISO 8601 dates; authenticated with an
+    x-api-key header.
+  humanURL: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+  baseURL: https://triggers.approve.com
+  properties:
+  - type: Documentation
+    url: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+  - type: APIReference
+    url: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
 common:
 - type: Website
   url: https://approve.com/
+- type: DeveloperPortal
+  url: https://developer.tipalti.com/
+- type: Documentation
+  url: https://help.tipalti.com/hc/en-us/articles/11026416890647-Developer-Documentation
+- type: APIReference
+  url: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+- type: Authentication
+  url: authentication/approvecom-authentication.yml
+- type: Sandbox
+  url: sandbox/approvecom-sandbox.yml
+- type: Conventions
+  url: conventions/approvecom-conventions.yml
+- type: DomainSecurity
+  url: security/approvecom-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

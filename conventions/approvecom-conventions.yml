@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+authentication:
+  style: api-key
+  header: x-api-key
+  ref: authentication/approvecom-authentication.yml
+transport:
+  protocol: https
+  base_url_production: https://triggers.approve.com
+  base_url_sandbox: https://triggers.sandbox.approve.com
+serialization:
+  request: application/json
+  response: application/json
+  date_format: ISO 8601
+idempotency:
+  supported: false
+  notes: No idempotency-key header or mechanism is documented for the Procurement REST API.
+pagination:
+  documented: false
+versioning:
+  documented: false
+rate_limits:
+  documented: false
+error_envelope:
+  documented: false
+  notes: Responses are standard JSON; a structured RFC 9457 problem+json error envelope is not documented.

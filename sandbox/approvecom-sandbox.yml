@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+docs: https://help.tipalti.com/hc/en-us/articles/30718248220823-Procurement-REST-API-documentation
+environments:
+- mode: sandbox
+  base_url: https://triggers.sandbox.approve.com
+  api_key_header: x-api-key
+  notes: Test environment for the Procurement REST API; token obtained from your Tipalti Implementation Manager.
+- mode: production
+  base_url: https://triggers.approve.com
+  api_key_header: x-api-key
+test_values: []
+notes: >-
+  Approve.com (Tipalti Procurement) publishes a separate sandbox host but does not publish
+  self-serve test credentials, test cards, or fixture/trigger values. API tokens are issued
+  by an Implementation Manager. No magic test identifiers are documented.
