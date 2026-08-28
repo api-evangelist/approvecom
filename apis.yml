@@ -11,6 +11,17 @@ description: >-
   and exchanging JSON with ISO 8601 dates; the purchase-orders API exposes GET and Update
   purchase-order operations so an external system can stay in sync with Tipalti.
 url: https://raw.githubusercontent.com/api-evangelist/approvecom/refs/heads/main/apis.yml
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
